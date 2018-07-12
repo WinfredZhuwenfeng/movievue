@@ -13,7 +13,14 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer:{
     contentBase:'./dist',
-    hot:true
+    hot:true,
+    proxy:{
+      '/api':{
+        target:'http://api.douban.com/v2/',
+        pathRewrite:{"^/api":""},
+        changeOrigin:true
+      }
+    }
   },
   entry: join("./src/main.js"),
   output: {
