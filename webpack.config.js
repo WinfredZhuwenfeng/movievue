@@ -22,7 +22,7 @@ module.exports = {
       }
     }
   },
-  entry: join("./src/main.js"),
+  entry: ['babel-polyfill',join("./src/main.js")],
   output: {
     path: join(__dirname, "dist"),
     filename: "bundle.js"

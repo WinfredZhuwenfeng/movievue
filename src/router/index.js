@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import MovieList from '../conponents/movie/List.vue'
-
+import MovieDetail from '../conponents/movie/Detail.vue'
 
 Vue.use(VueRouter)
 
@@ -12,6 +12,7 @@ export default new VueRouter({
     // {path:'/',component:{template:"<h1>hell</h1>"}},
     {path:'/in_theaters',component:MovieList},
     {path:'/coming_soon',component:MovieList},
-    {path:'/top250',component:MovieList}
+    {path:'/top250',component:MovieList},
+    {path:'/movie/:id',component:MovieDetail}
   ]
 })
