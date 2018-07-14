@@ -13,6 +13,7 @@ export default new VueRouter({
     {path:'/in_theaters',component:MovieList},
     {path:'/coming_soon',component:MovieList},
     {path:'/top250',component:MovieList},
-    {path:'/movie/:id',component:MovieDetail}
+    {path:'/movie/:id',component:MovieDetail},
+    {path:'/search',component:MovieList}
   ]
 })

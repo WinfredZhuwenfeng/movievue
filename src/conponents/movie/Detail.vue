@@ -26,7 +26,7 @@ import axios from 'axios'
         const res = await axios.get(`/api/movie/subject/${id}`)
         // console.log(res.data)
         this.movie = res.data
-        console.log([name][...res.data.directors])
+        // console.log([name][...res.data.directors])
       }
     }
   }

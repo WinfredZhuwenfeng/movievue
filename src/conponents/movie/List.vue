@@ -42,10 +42,12 @@ import axios from 'axios'
     },
     methods:{
      async loadMovie (){
+      // console.log(this.$route)
         const res = await axios.get(`/api/movie${this.$route.path}`,{
           params:{
             start:this.start,
             count:this.count,
+            q:this.$route.query.q
           }
         })
         if(res.data.subjects.length === 0){
